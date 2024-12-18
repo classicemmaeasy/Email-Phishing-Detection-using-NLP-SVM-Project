@@ -28,6 +28,16 @@ def mail(input_data):
 def main():
 
     import streamlit as st
+    # Custom CSS to hide Streamlit branding and footer
+    hide_streamlit_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        img {visibility: hidden;}
+        footer:after {content: ''; display: none;}
+        </style>
+    """
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
     st.markdown('<p style="font-size:24px; font-weight:bold;">Welcome to the Phishing Mail Prediction App</p>', unsafe_allow_html=True)
