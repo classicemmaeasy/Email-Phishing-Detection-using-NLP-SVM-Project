@@ -7,10 +7,10 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 def mail(input_data):
 
-    with open("C:/Users/HP/Downloads/Email Phish Guys/tf_model.sav", "rb") as f:
+    with open("tf_model.sav", "rb") as f:
         vectorizer = pickle.load(f)
 
-    with open("C:/Users/HP/Downloads/Email Phish Guys/SVM_model.sav", "rb") as f:
+    with open("SVM_model.sav", "rb") as f:
         loaded_model = pickle.load(f)
 
     tansdata=vectorizer.transform([input_data])
